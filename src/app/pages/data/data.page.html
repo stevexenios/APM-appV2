@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+
+     <ion-button (click)="openLanguagePopover($event)">{{'DATA.text'| translate}}<ion-icon name = "arrow-dropdown">
+     </ion-icon> </ion-button>
+
+     
+    </ion-buttons>
+    <ion-title>{{'DATA.title' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content  color="primary">
+    <ion-grid style = "margin-bottom: 25px;">
+        <ion-list>
+          <ion-item *ngFor= "let entry of (data | async)?.results"></ion-item> 
+        </ion-list>
+      
+        <ion-row padding>
+          <ion-col col-11>
+            <button ion-button block color = "danger" id="addEntry"(click)="addEntry()">
+            <ion-icon name="add-circle"></ion-icon>&nbsp; {{'DATA.entry' | translate}}</button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+</ion-content>
+
+

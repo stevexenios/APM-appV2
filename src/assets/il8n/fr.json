@@ -1,0 +1,42 @@
+{
+    "DATA" : {
+        "text" : "Changer de Langue",
+        "title" : "S'identifier",
+        "entry" : "ajouter une entrée"
+    },
+
+    "MAP" : {
+        "text" : "Changer de Langue",
+        "title" : "Carte de Pollution",
+        "display" : "Bienvenue sur le projet plus pour être ajouté à l'avenir.",
+        "button1" : "Entrée Utilisateu",
+        "button2" : "RPi"
+    },
+
+    "RPI":{
+        "text" :"Changer de Langue",
+        "title": "RPi singulier",
+        "display": "Données focalisées d'un Raspberry Pi spécifique affichées ci-dessous.",
+        "button":"Retour au Tableau de Bord",
+        "latitude":"latitude",
+        "longitude": "longitude",
+        "temp" :"température",
+        "hum" : "humidité",
+        "part" :"niveau de particules (ppm)"
+    },
+
+    "USERINPUT" : {
+        "text" : "Changer de Langue",
+        "title": "Entrée Utilisateur",
+        "display": "Entrez votre position GPS, la température, l'humidité, le niveau de particules et comment vous vous sentez.",
+        "button": "Retour au Tableau de Bord",
+        "latitude":"latitude",
+        "longitude": "longitude",
+        "temp" : "température",
+        "hum" : "humidité",
+        "part": "niveau de particules (ppm)",
+        "qual": "comment allez-vous?",
+        "submit": "Soumettre"
+    }
+
+}

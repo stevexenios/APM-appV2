@@ -1,0 +1,43 @@
+{
+    "DATA" : {
+        "text" : "Change Language",
+        "title" : "Data",
+        "entry": "Add Entry"
+    },
+
+    "MAP" : {
+        "text" : "Change Language",
+        "title" : "Pollution Map",
+        "display" : "Welcome to the project more to be added in the future.",
+        "button1" : "User Input",
+        "button2" : "RPi"
+
+    },
+
+    "RPI":{
+        "text" :"Change Language",
+        "title": "Singular RPi",
+        "display": "Focused data from a specific Raspberry Pi displayed below.",
+        "button":"Return to Dashboard",
+        "latitude":"latitude",
+        "longitude": "longitude",
+        "temp" :"temperature",
+        "hum" : "humidity",
+        "part" :"particulate level (ppm)"
+    },
+
+    "USERINPUT" : {
+        "text" : "Change Language",
+        "title": "User Input",
+        "display": "Enter your GPS location, the temperature, humidity, particulate level, and how you are feeling.",
+        "button": "Return to Dashboard",
+        "latitude":"latitude",
+        "longitude": "longitude",
+        "temp" : "temperature",
+        "hum" : "humidity",
+        "part": "particulate level (ppm)",
+        "qual": "how are you feeling?",
+        "submit": "Submit"
+    }
+
+}

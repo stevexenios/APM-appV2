@@ -1,0 +1,43 @@
+{
+    "DATA" : {
+        "text" : "Cambiar Idioma",
+        "title" : "Iniciar Sesión",
+        "entry" : "añadir entrada"
+    },
+
+    "MAP" : {
+        "text" : "Cambiar Idioma",
+        "title" : "Mapa de la Contaminación",
+        "display" : "Bienvenido al proyecto más para ser agregado en el futuro.",
+        "button1" : "Entrada del usuario",
+        "button2" : "RPi"
+
+    },
+
+    "RPI":{
+        "text" :"Cambiar Idioma",
+        "title": "RPi Singular",
+        "display": "Los datos enfocados de una Raspberry Pi específica se muestran a continuación.",
+        "button":"Regresar a Dashboard",
+        "latitude":"latitud",
+        "longitude": "longitud",
+        "temp" :"temperatura",
+        "hum" : "humedad",
+        "part" :"nivel de partículas (ppm)"
+    },
+
+    "USERINPUT" : {
+        "text" : "Cambiar Idioma",
+        "title": "Entrada do Usuário",
+        "display": "Ingrese su ubicación GPS, la temperatura, la humedad, el nivel de partículas y cómo se siente.",
+        "button": "Regresar a Dashboard",
+        "latitude":"latitud",
+        "longitude": "longitud",
+        "temp" : "temperatura",
+        "hum" : "humedad",
+        "part": "nivel de partículas (ppm)",
+        "qual" : "¿como te sientes?",
+        "submit": "Enviar"
+    }
+
+}

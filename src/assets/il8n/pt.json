@@ -1,0 +1,42 @@
+{
+    "DATA" : {
+        "text" : "Mudar Idioma",
+        "title" : "Entrar",
+        "entry" : "adicionar entrada"
+    },
+
+    "MAP" : {
+        "text" : "Mudar Idioma",
+        "title" : "Mapa de Polição",
+        "display" : "Bem-vindo ao projeto mais a ser adicionado no futuro.",
+        "button1" : "Entrada do Usuário",
+        "button2" : "RPi"
+
+    },
+
+    "RPI":{
+        "text" :"Mudar Idioma",
+        "title": "RPi Singular",
+        "display": "Dados focados de um Raspberry Pi específico exibido abaixo.",
+        "button":"Regressar ao Dashboard",
+        "latitude":"latitude",
+        "longitude": "longitude",
+        "temp" :"temperatura",
+        "hum" : "umidade",
+        "part" :"nível de partículas (ppm)"
+    },
+
+    "USERINPUT" : {
+        "text" : "Mudar Idioma",
+        "title": "Entrada do Usuário",
+        "display": "Insira informações para nova conta",
+        "button": "Regressar ao Dashboard",
+        "latitude":"latitude",
+        "longitude": "longitude",
+        "temp" : "temperatura",
+        "hum" : "umidade",
+        "part": "nível de partículas (ppm)",
+        "qual": "como você está se sentindo?",
+        "submit": "Enviar"
+    }
+}
