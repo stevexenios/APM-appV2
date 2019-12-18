@@ -1,37 +1,52 @@
+<!-- Creates the bar on the top of the page that displays the name of the page and any other options specific
+to the page -->
 <ion-header>
   <ion-toolbar>
+    <!-- Positions the button on the right side of the page  -->
     <ion-buttons slot="end">
-
-     <ion-button (click)="openLanguagePopover($event)">{{ 'RPI.text' | translate}}<ion-icon name = "arrow-dropdown">
+      <!-- Creates the change language button that is a dropdown arrow that should open up to the list of 
+      language options. -->
+     <ion-button (click)="openLanguagePopover($event)">{{ 'RPI.text' | translate}}<!-- Sets the text to be piped 
+      in from the language pages --><ion-icon name = "arrow-dropdown">
      </ion-icon></ion-button>
-     
     </ion-buttons>
-    <ion-title>{{ 'RPI.title' | translate}}</ion-title>
+
+    <!-- Creates the title of the page and places it in the header bar of the page -->
+    <ion-title>{{ 'RPI.title' | translate}}<!-- Sets the text to be piped 
+      in from the language pages --> </ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+<!-- Creates a form that holds the information that will eventually be read in from the cloud server -->
 <ion-content  color="primary">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           <div text-center>
-            <h3>{{ 'RPI.display' | translate}}</h3>
+            <h3>{{ 'RPI.display' | translate}}<!-- Sets the text to be piped in from the language pages --></h3>
           </div>
+          <!-- Each entry is set so that it can't be altered by the user as it is being read from the server-->
           <div padding>
             <ion-item>
-              <ion-input  name="latitude" type="text" placeholder="37&deg;44&#39;46.1&#34; N" readonly= "true" ngModel></ion-input>
+              <ion-input  name="latitude" type="text" placeholder="37&deg;44&#39;46.1&#34; N" readonly= "true" 
+              ngModel></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input  name="longitude" type="text" placeholder="25&deg;40&#39;0.8&#34; W" readonly= "true" ngModel></ion-input>
+              <ion-input  name="longitude" type="text" placeholder="25&deg;40&#39;0.8&#34; W" readonly= "true"
+               ngModel></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="temperature" type="text" placeholder="17.8&deg;C" readonly= "true" ngModel></ion-input>
+              <ion-input name="temperature" type="text" placeholder="17.8&deg;C" readonly= "true" 
+              ngModel></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="humidity" type="text" placeholder="75&#37;" readonly= "true" ngModel></ion-input>
+              <ion-input name="humidity" type="text" placeholder="75&#37;" readonly= "true"
+               ngModel></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="particulate level (ppm)" type="text" placeholder="2700" readonly= "true" ngModel></ion-input>
+              <ion-input name="particulate level (ppm)" type="text" placeholder="2700" readonly= "true" 
+              ngModel></ion-input>
             </ion-item>
           </div>
         </ion-col>

@@ -1,3 +1,6 @@
+// This was created by ionic when the app was made I have not done anything with it and don't know exactly what
+// it does as such I would leave these alone for now.
+
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 
