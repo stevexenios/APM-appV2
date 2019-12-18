@@ -1,6 +1,7 @@
 // This is where the routing for the app is handled and is very important as it allows the tabular nature of
 // the app. It is important that the path on the *.module.ts pages for the other pages be left as path: '' so
 // so that the router can set that path and ensure the routing works.
+
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
