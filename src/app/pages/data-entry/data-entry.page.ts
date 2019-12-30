@@ -1,8 +1,12 @@
+// This is needed for the current server funcionality and thus will likely be changed
 import { DataService } from './../../data/data.service';
+
 import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
+// This is the controls for the translator and navigation between pages
 import { PopoverController, NavController } from '@ionic/angular';
 import { LanguagePopoverPage } from '../../pages/language-popover/language-popover.page';
-import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -16,6 +20,9 @@ export class DataEntryPage implements OnInit {
   constructor(public navCtrl: NavController, private translate: TranslateService, private popoverCtrl: PopoverController,
               private dataService: DataService, private router: Router) { }
 
+
+  // Once the fact that NgOnInit is not being called when the popover page is opened is fixed this creates
+  // the dropdown list of languages for the user to choose from for translation
   async openLanguagePopover(ev) {
     const popover = await this.popoverCtrl.create({
       component: LanguagePopoverPage,
@@ -27,6 +34,8 @@ export class DataEntryPage implements OnInit {
   ngOnInit() {
   }
 
+  // This command sends the information from the form to the server and then sends the user back to the data
+  // display page. As this is attached to the server functionality it will likely be changed.
   addEntry(form) {
     this.dataService.addEntry(form.value).subscribe((res) => {
     });

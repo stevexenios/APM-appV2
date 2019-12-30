@@ -1,11 +1,17 @@
+<!-- The tabs creates the layout for having the tab buttons so that they can be used to navigate -->
 <ion-tabs>
-
+  <!-- Places the buttons in a bar on the bottom of the screen -->
   <ion-tab-bar slot="bottom" color="dark">
+    <!-- Sets the name of the button, which is very important as it is the signal that is used for routing
+    in the app, this will become clearer on the home.router.ts page -->
     <ion-tab-button tab="map">
+      <!-- Sets the look of the button by setting the icon that it will use and the text label that appears to
+         the user on the page -->
       <ion-icon name="globe"></ion-icon>
       <ion-label>Map</ion-label>
     </ion-tab-button>
   
+    <!-- Same set up as the other tab button but for the data page -->
     <ion-tab-button tab="data">
       <ion-icon name="grid"></ion-icon>
       <ion-label>Data</ion-label>

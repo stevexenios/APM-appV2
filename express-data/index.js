@@ -1,3 +1,12 @@
+// These pages may become irrelevant if the other server methods I found work better as they do they attempt
+// to do the same thing 
+
+// These pages were also copied in from another page, and altered to remove things involving login and
+// registration and made to just create and display information. As such they I do not fully understand how they
+// work and as such will try to figure it out better, if they are not thrown away as we move forward
+
+
+// Sets that the below dependencies are required
 const  express  =  require('express');
 const  bodyParser  =  require('body-parser');
 const cors = require('cors');

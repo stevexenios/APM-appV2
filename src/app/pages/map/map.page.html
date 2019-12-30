@@ -1,23 +1,28 @@
-
+<!-- Creates the bar on the top of the page that displays the name of the page and any other options specific
+to the page -->
 <ion-header>
   <ion-toolbar>
+    <!-- Positions the button on the right side of the page  -->
     <ion-buttons slot="end">
+      <!-- Creates a button to send the user to the page that displays more detailed information about the 
+      air quality in their location  -->
+     <ion-button (click)="gotoRPi();">{{'MAP.button2'|translate}} <!-- Sets the text to be piped 
+      in from the language pages --> </ion-button>
 
-     <ion-button (click)="gotoRPi();">{{'MAP.button2'|translate}}</ion-button>
 
-     <ion-button (click)="openLanguagePopover($event)">{{'MAP.text' | translate}}<ion-icon name = "arrow-dropdown">
+     <!-- Creates the change language button that is a dropdown arrow that should open up to the list of 
+      language options. -->
+     <ion-button (click)="openLanguagePopover($event)">{{'MAP.text' | translate}} <!-- Sets the text to be piped 
+      in from the language pages --> <ion-icon name = "arrow-dropdown">
      </ion-icon> </ion-button>
-     
-
-     
     </ion-buttons>
-    <ion-title>{{'MAP.title' | translate}}</ion-title>
+
+    <!-- Creates the title of the page and places it in the header bar of the page -->
+    <ion-title>{{'MAP.title' | translate}} <!-- Sets the text to be piped 
+      in from the language pages --> </ion-title>
   </ion-toolbar>
 </ion-header>
- 
+ <!-- This will be updated as we make the page change color for the based on the air quality near where the 
+user is at -->
 <ion-content color="primary" padding>
- <!--<div class="ion-padding">
-    {{ 'MAP.display' | translate}}
-  </div>-->
-
 </ion-content>

@@ -1,3 +1,6 @@
+// These pages may become irrelevant if the other server methods I found work better as they do they attempt
+// to do the same thing
+
 import { TestBed } from '@angular/core/testing';
 
 import { DataService } from './data.service';

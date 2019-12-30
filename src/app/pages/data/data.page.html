@@ -1,23 +1,33 @@
+<!-- Creates the bar on the top of the page that displays the name of the page and any other options specific
+to the page -->
+
 <ion-header>
   <ion-toolbar>
+    <!-- Positions the button on the right side of the page  -->
     <ion-buttons slot="end">
-
-     <ion-button (click)="openLanguagePopover($event)">{{'DATA.text'| translate}}<ion-icon name = "arrow-dropdown">
+      <!-- Creates the change language button that is a dropdown arrow that should open up to the list of 
+      language options. -->
+     <ion-button (click)="openLanguagePopover($event)">{{'DATA.text'| translate}} <!-- Sets the text to be piped 
+      in from the language pages -->
+       <ion-icon name = "arrow-dropdown">
      </ion-icon> </ion-button>
-
-     
     </ion-buttons>
-    <ion-title>{{'DATA.title' | translate}}</ion-title>
+
+    <!-- Creates the title of the page and places it in the header bar of the page -->
+    <ion-title>{{'DATA.title' | translate}} <!-- Sets the text to be piped 
+      in from the language pages --> </ion-title>
   </ion-toolbar>
 </ion-header>
 
-
+<!-- The content information of the page -->
 <ion-content  color="primary">
     <ion-grid style = "margin-bottom: 25px;">
+      <!-- Creates a list of data entries that when the server is up and running will be read in from there -->
         <ion-list>
           <ion-item *ngFor= "let entry of (data | async)?.results"></ion-item> 
         </ion-list>
       
+        <!-- Creates an add entry button that sends the user to the page for data entry-->
         <ion-row padding>
           <ion-col col-11>
             <button ion-button block color = "danger" id="addEntry"(click)="addEntry()">
