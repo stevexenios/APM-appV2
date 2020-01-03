@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController, NavController } from '@ionic/angular';
 import { LanguagePopoverPage } from './../../pages/language-popover/language-popover.page';
 import { TranslateService } from '@ngx-translate/core';
+
 import { ThemeService } from './../../services/theme.service';
 
 
@@ -17,12 +18,12 @@ import { ThemeService } from './../../services/theme.service';
 export class MapPage implements OnInit {
 
   constructor(public navCtrl: NavController, private translate: TranslateService,
-    private popoverCtrl: PopoverController, private theme: ThemeService) {
+              private popoverCtrl: PopoverController, private theme: ThemeService) {
   }
 
   // Once the fact that NgOnInit is not being called when the popover page is opened is fixed this creates
   // the dropdown list of languages for the user to choose from for translation
-  async openLanguagePopover(ev) {
+  async openLanguagePopover(ev: any) {
     const popover = await this.popoverCtrl.create({
       component: LanguagePopoverPage,
       event: ev

@@ -7,7 +7,8 @@ const routes: Routes = [
     // by doing this it tells the app to use the home.router.ts as the navigation for the app
     path: '',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-  }
+  },
+  { path: 'scale-popover', loadChildren: './pages/scale-popover/scale-popover.module#ScalePopoverPageModule' }
 ];
 @NgModule({
   imports: [

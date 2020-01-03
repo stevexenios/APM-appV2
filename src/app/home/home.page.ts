@@ -3,6 +3,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from './../services/theme.service';
 
+import { QualitativeQuestionComponent } from './../components/qualitative-question/qualitative-question.component';
+import { PopoverController } from '@ionic/angular';
+
 
 const themes = {
   good: {
@@ -46,7 +49,7 @@ const themes = {
 export class HomePage implements OnInit {
   aqi: number;
 
-  constructor(private theme: ThemeService) {
+  constructor(private theme: ThemeService,  private popoverCtrl: PopoverController) {
     this.setAQI();
     if (this.aqi <= 50) {
       this.theme.setTheme(themes.good);
@@ -60,10 +63,27 @@ export class HomePage implements OnInit {
       this.theme.setTheme(themes.veryUnhealthy);
     } else {
       this.theme.setTheme(themes.hazardous);
-    }}
+    }
+    if (this.aqi >= 101) {
+      this.openQualitativeQuestion();
+    }
+  }
+
+  async openQualitativeQuestion() {
+    const popover = await this.popoverCtrl.create({
+      component: QualitativeQuestionComponent,
+      animated: true,
+      showBackdrop: true,
+      componentProps: {popoverController: this.popoverCtrl}
+
+    });
+    return await popover.present();
+  }
 
   ngOnInit() {
   }
+
+
 
   setAQI() {
     this.aqi = Math.floor(Math.random() * 500);
