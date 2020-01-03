@@ -29,27 +29,27 @@ both the server functionality and the information that we collect from the user 
           <div padding>
             <!-- Each element is given a unique name and assigned a type that will be altered as we lock in what is
             needed for out putposes, and set as required before the user can submit the entry -->
-            <ion-item>
+            <ion-item color= "primary">
               <ion-input  name="latitude" type="text" placeholder="{{ 'USERINPUT.latitude' | translate}} 37&deg;
               44&#39;46.1&#34; N" ngModel required></ion-input>
             </ion-item>
-            <ion-item>
+            <ion-item color= "primary">
               <ion-input  name="longitude" type="text" placeholder="{{ 'USERINPUT.longitude' | translate}} 25&deg;
               40&#39;0.8&#34; W" ngModel  required></ion-input>
             </ion-item>
-            <ion-item>
+            <ion-item color= "primary">
               <ion-input name="temperature" type="text" placeholder="{{ 'USERINPUT.temp' | translate}} 17.8&deg;C" 
               ngModel required></ion-input>
             </ion-item>
-            <ion-item>
+            <ion-item  color= "primary">
               <ion-input name="humidity" type="text" placeholder="{{ 'USERINPUT.hum' | translate}} 75&#37;" 
               ngModel  required></ion-input>
-            </ion-item>
-            <ion-item>
+            </ion-item >
+            <ion-item color= "primary">
               <ion-input name="particulate" type="text" placeholder="{{ 'USERINPUT.part' | translate}} 2700 " 
               ngModel  required></ion-input>
             </ion-item>
-            <ion-item>
+            <ion-item color= "primary">
               <ion-input name="qualitative" type="text" placeholder="{{ 'USERINPUT.qual' | translate}}  good" 
               ngModel required></ion-input>
             </ion-item>
@@ -57,7 +57,7 @@ both the server functionality and the information that we collect from the user 
           <div padding>
             <!-- Creates the submit button and makes it so that it does not function if the form is not filled 
               correctly-->
-            <ion-button  size="large" type="submit" [disabled] = "form.invalid" expand = "block">
+            <ion-button  size="large" type="submit" [disabled] = "form.invalid" expand = "block" color = "dark">
               {{'USERINPUT.submit' | translate}} <!-- Sets the text to be piped in from the language pages -->
             </ion-button>
           </div>

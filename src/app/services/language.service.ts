@@ -24,6 +24,7 @@ export class LanguageService {
   setInitialAppLanguage() {
     // tslint:disable-next-line: prefer-const
     let language = this.translate.getBrowserLang();
+    // Make default language English if default language of user is not recognized by app.
     this.translate.setDefaultLang(language);
 
     this.storage.get(LNG_KEY).then(val => {
@@ -68,7 +69,7 @@ export class LanguageService {
     }
   }
 
-  // When the user selects a language this updates the translation to use that language and updates the stored 
+  // When the user selects a language this updates the translation to use that language and updates the stored
   // value to be the selected language so that the langaguge stays what was selected when the user returns to
   // the app and change page
   setLanguage(lng) {

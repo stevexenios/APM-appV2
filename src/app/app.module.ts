@@ -3,7 +3,7 @@
 // This imports the data handling service for the server, as such this may be replaced
 import { DataModule } from './data/data.module';
 
-// Default imports needed for teh app
+// Default imports needed for the app
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';

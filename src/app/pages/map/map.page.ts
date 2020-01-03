@@ -4,6 +4,10 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController, NavController } from '@ionic/angular';
 import { LanguagePopoverPage } from './../../pages/language-popover/language-popover.page';
 import { TranslateService } from '@ngx-translate/core';
+import { ThemeService } from './../../services/theme.service';
+
+
+
 
 @Component({
   selector: 'app-map',
@@ -12,8 +16,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MapPage implements OnInit {
 
-  constructor(public navCtrl: NavController, private translate: TranslateService, 
-              private popoverCtrl: PopoverController) { }
+  constructor(public navCtrl: NavController, private translate: TranslateService,
+    private popoverCtrl: PopoverController, private theme: ThemeService) {
+  }
 
   // Once the fact that NgOnInit is not being called when the popover page is opened is fixed this creates
   // the dropdown list of languages for the user to choose from for translation
@@ -26,8 +31,8 @@ export class MapPage implements OnInit {
   }
 
   ngOnInit() {
-  }
 
+  }
 
   // Sends the user to the page for displaying more detailed information about the air quality in their location
   // when clicked on the display
