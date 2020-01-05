@@ -24,8 +24,13 @@ export class LanguageService {
   setInitialAppLanguage() {
     // tslint:disable-next-line: prefer-const
     let language = this.translate.getBrowserLang();
-    // Make default language English if default language of user is not recognized by app.
-    this.translate.setDefaultLang(language);
+    if (language !== 'en' && language !== 'pt' && language !== 'fr' && language !== 'es') {
+      this.translate.setDefaultLang('en');
+      this.selected = 'en';
+    } else {
+      this.translate.setDefaultLang(language);
+      this.selected = language;
+    }
 
     this.storage.get(LNG_KEY).then(val => {
       if (val) {
@@ -39,28 +44,28 @@ export class LanguageService {
   // this allows the language to be changed easily and the list of languages to translate itself as appropriate
   getLanguages() {
     if (this.selected === 'en') {
-      return[
+      return [
         {text: 'English', value: 'en'},
         {text: 'Portugese', value: 'pt'},
         {text: 'Spanish', value: 'es'},
         {text: 'French', value: 'fr'},
       ];
     } else if (this.selected === 'pt') {
-      return[
+      return [
         {text: 'Inglês', value: 'en'},
         {text: 'Português', value: 'pt'},
         {text: 'Espanhol  ', value: 'es'},
         {text: 'Francês', value: 'fr'},
       ];
     } else if (this.selected === 'es') {
-      return[
+      return [
         {text: 'Inglés', value: 'en'},
         {text: 'Portugués', value: 'pt'},
         {text: 'Español', value: 'es'},
         {text: 'Francés', value: 'fr'},
       ];
     } else if (this.selected === 'fr') {
-      return[
+      return [
         {text: 'Anglais', value: 'en'},
         {text: 'Portugais ', value: 'pt'},
         {text: 'Espanol', value: 'es'},

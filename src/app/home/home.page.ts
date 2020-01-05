@@ -1,6 +1,6 @@
 // This page is simple as there is no real functionality for the app that is handled by this page directly
 // all that is needed is this basic page that simply creates the page
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SystemJsNgModuleLoader } from '@angular/core';
 import { ThemeService } from './../services/theme.service';
 
 import { QualitativeQuestionComponent } from './../components/qualitative-question/qualitative-question.component';

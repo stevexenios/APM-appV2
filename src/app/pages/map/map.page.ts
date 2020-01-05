@@ -1,4 +1,3 @@
-import { HomePage } from './../../home/home.page';
 import { Component, OnInit } from '@angular/core';
 
 // These imports added for the naviagation and translation services
@@ -31,9 +30,10 @@ export class MapPage implements OnInit {
   async openLanguagePopover(ev: any) {
     const popover = await this.popoverCtrl.create({
       component: LanguagePopoverPage,
+      showBackdrop: true,
       event: ev
     });
-    await popover.present();
+    return await popover.present();
   }
 
   ngOnInit() {
@@ -47,7 +47,7 @@ export class MapPage implements OnInit {
     this.navCtrl.navigateForward('/home/map/rpi');
   }
 
-  submit(form){
+  submit(form) {
     this.value = form.value;
     this.threshold = false;
   }

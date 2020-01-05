@@ -35,9 +35,10 @@ export class DataPage implements OnInit {
    async openLanguagePopover(ev) {
     const popover = await this.popoverCtrl.create({
       component: LanguagePopoverPage,
+      showBackdrop: true,
       event: ev
     });
-    popover.present();
+    return await popover.present();
   }
 
 

@@ -27,9 +27,10 @@ export class DataEntryPage implements OnInit {
   async openLanguagePopover(ev) {
     const popover = await this.popoverCtrl.create({
       component: LanguagePopoverPage,
+      showBackdrop: true,
       event: ev
     });
-    await popover.present();
+    return await popover.present();
   }
 
   ngOnInit() {
