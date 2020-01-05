@@ -10,7 +10,7 @@
           <!-- Each element is given a unique name and assigned a type that will be altered as we lock in what is
           needed for out putposes, and set as required before the user can submit the entry -->
           <ion-item color= "primary">
-            <ion-input  name="Value" type="number" placeholder="5" ngModel required></ion-input>
+            <ion-range  name="Value" min = {0} max = {10} ngModel required></ion-range>
           </ion-item>
         </div>
         <div padding>

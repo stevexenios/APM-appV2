@@ -50,6 +50,19 @@ export class HomePage implements OnInit {
   aqi: number;
 
   constructor(private theme: ThemeService,  private popoverCtrl: PopoverController) {
+  }
+
+  // async openQualitativeQuestion() {
+  //   const popover = await this.popoverCtrl.create({
+  //     component: QualitativeQuestionComponent,
+  //     showBackdrop: true,
+  //     componentProps: {popoverController: this.popoverCtrl}
+
+  //   });
+  //   return await popover.present();
+  // }
+
+  ngOnInit() {
     this.setAQI();
     if (this.aqi <= 50) {
       this.theme.setTheme(themes.good);
@@ -64,29 +77,16 @@ export class HomePage implements OnInit {
     } else {
       this.theme.setTheme(themes.hazardous);
     }
-    if (this.aqi >= 101) {
-      this.openQualitativeQuestion();
-    }
-  }
-
-  async openQualitativeQuestion() {
-    const popover = await this.popoverCtrl.create({
-      component: QualitativeQuestionComponent,
-      animated: true,
-      showBackdrop: true,
-      componentProps: {popoverController: this.popoverCtrl}
-
-    });
-    return await popover.present();
-  }
-
-  ngOnInit() {
+    // if (this.aqi >= 101) {
+    //   this.openQualitativeQuestion();
+    // }
   }
 
 
 
   setAQI() {
-    this.aqi = Math.floor(Math.random() * 500);
+    this.aqi  = 101;
+    // this.aqi = Math.floor(Math.random() * 500);
   }
 
 }

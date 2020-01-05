@@ -25,4 +25,31 @@ to the page -->
  <!-- This will be updated as we make the page change color for the based on the air quality near where the 
 user is at -->
 <ion-content color="primary" padding>
+  <div *ngIf = 'threshold'>
+    <form #form="" (ngSubmit)="submit(form)">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3>How are you feeling? <!-- To be added to the translation pages --></h3>
+            </div>
+            <div padding>
+              <!-- Each element is given a unique name and assigned a type that will be altered as we lock in what is
+              needed for out putposes, and set as required before the user can submit the entry -->
+              <ion-item color= "primary">
+                <ion-input  name="Value" type = "number" min = '0' max = '10' ngModel required></ion-input>
+              </ion-item>
+            </div>
+            <div padding>
+              <!-- Creates the submit button and makes it so that it does not function if the form is not filled 
+                correctly-->
+              <ion-button  size="large" type="submit" [disabled] = "form.invalid" expand = "block" color = "dark">
+                {{'USERINPUT.submit' | translate}} <!-- Sets the text to be piped in from the language pages -->
+              </ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      </form>
+  </div>
 </ion-content>
