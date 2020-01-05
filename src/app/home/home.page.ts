@@ -1,7 +1,9 @@
+
 // This page is simple as there is no real functionality for the app that is handled by this page directly
 // all that is needed is this basic page that simply creates the page
-import { Component, OnInit, SystemJsNgModuleLoader } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from './../services/theme.service';
+import { AqiService } from './../services/aqi.service';
 
 import { QualitativeQuestionComponent } from './../components/qualitative-question/qualitative-question.component';
 import { PopoverController } from '@ionic/angular';
@@ -49,7 +51,7 @@ const themes = {
 export class HomePage implements OnInit {
   aqi: number;
 
-  constructor(private theme: ThemeService,  private popoverCtrl: PopoverController) {
+  constructor(private theme: ThemeService,  private popoverCtrl: PopoverController, private aqiServ: AqiService) {
   }
 
   // async openQualitativeQuestion() {
@@ -82,11 +84,10 @@ export class HomePage implements OnInit {
     // }
   }
 
-
-
   setAQI() {
     this.aqi  = 101;
     // this.aqi = Math.floor(Math.random() * 500);
+    this.aqiServ.setAQI(this.aqi);
   }
 
 }

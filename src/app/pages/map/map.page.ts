@@ -6,6 +6,7 @@ import { LanguagePopoverPage } from './../../pages/language-popover/language-pop
 import { TranslateService } from '@ngx-translate/core';
 
 import { ThemeService } from './../../services/theme.service';
+import { AqiService } from 'src/app/services/aqi.service';
 
 
 
@@ -22,7 +23,7 @@ export class MapPage implements OnInit {
   value: number;
 
   constructor(public navCtrl: NavController, private translate: TranslateService,
-              private popoverCtrl: PopoverController, private theme: ThemeService) {
+              private popoverCtrl: PopoverController, private theme: ThemeService, private aqiServ: AqiService) {
   }
 
   // Once the fact that NgOnInit is not being called when the popover page is opened is fixed this creates
@@ -37,7 +38,7 @@ export class MapPage implements OnInit {
   }
 
   ngOnInit() {
-    this.aqi = 101;
+    this.aqi = this.aqiServ.getAQI();
     this.threshold = this.aqi >= 101;
   }
 
