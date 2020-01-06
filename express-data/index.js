@@ -29,8 +29,7 @@ const  createEntriesTable  = () => {
         longitude text,
         temperature text,
         humidity text,
-        particulate text,
-        qualitative text)`;
+        particulate text)`;
 
     return  database.run(sqlQuery);
 }

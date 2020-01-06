@@ -25,13 +25,19 @@ to the page -->
  <!-- This will be updated as we make the page change color for the based on the air quality near where the 
 user is at -->
 <ion-content color="primary" padding>
+  <div *ngIf = 'goodBool'>{{'MAP.good' | translate}}</div>
+  <div *ngIf = 'modBool'>{{'MAP.mod' | translate}}</div>
+  <div *ngIf = 'usfgBool'>{{'MAP.ufsg' | translate}}</div>
+  <div *ngIf = 'unhealthBool'>{{'MAP.unhealth' | translate}}</div>
+  <div *ngIf = 'verBool'>{{'MAP.ver' | translate}}</div>
+  <div *ngIf = 'hazBool'>{{'MAP.haz' | translate}}s</div>
   <div *ngIf = 'threshold'>
-    <form #form="" (ngSubmit)="submit(form)">
+    <form #form (ngSubmit)="submit(form)">
       <ion-grid>
         <ion-row color="primary" justify-content-center>
           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
             <div text-center>
-              <h3>How are you feeling? <!-- To be added to the translation pages --></h3>
+              <h3> {{'USERINPUT.qual' | translate}}<!-- To be added to the translation pages --></h3>
             </div>
             <div padding>
               <!-- Each element is given a unique name and assigned a type that will be altered as we lock in what is

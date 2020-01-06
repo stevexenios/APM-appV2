@@ -1,16 +1,26 @@
 {
+    "HOME" : {
+        "tab1" : "Hogar",
+        "tab2" : "Datos"
+      },
     "DATA" : {
         "text" : "Cambiar Idioma",
-        "title" : "Iniciar Sesión",
-        "entry" : "añadir entrada"
+        "title" : "Datos",
+        "entry" : "Añadir Entrada"
     },
 
     "MAP" : {
         "text" : "Cambiar Idioma",
-        "title" : "Mapa de la Contaminación",
+        "title" : "Hogar",
         "display" : "Bienvenido al proyecto más para ser agregado en el futuro.",
         "button1" : "Entrada del usuario",
-        "button2" : "RPi"
+        "button2" : "RPi",
+        "good" : "Calidad Actual del Aire: Buena",
+        "mod" : "Calidad Actual del Aire: Moderada",
+        "ufsg" : "Calidad Actual del Aire: Poco Saludable para Grupos Específicos",
+        "unhealth" : "Calidad Actual del Aire: Insalubre",
+        "ver" : "Calidad Actual del Aire: Muy Poco Saludable",
+        "haz" : "Calidad Actual del Aire: Peligroso"
 
     },
 
@@ -19,11 +29,11 @@
         "title": "RPi Singular",
         "display": "Los datos enfocados de una Raspberry Pi específica se muestran a continuación.",
         "button":"Regresar a Dashboard",
-        "latitude":"latitud",
-        "longitude": "longitud",
-        "temp" :"temperatura",
-        "hum" : "humedad",
-        "part" :"nivel de partículas (ppm)"
+        "latitude":"Latitud",
+        "longitude": "Longitud",
+        "temp" :"Temperatura",
+        "hum" : "Humedad",
+        "part" :"Nivel de partículas (ppm)"
     },
 
     "USERINPUT" : {
@@ -31,12 +41,12 @@
         "title": "Entrada do Usuário",
         "display": "Ingrese su ubicación GPS, la temperatura, la humedad, el nivel de partículas y cómo se siente.",
         "button": "Regresar a Dashboard",
-        "latitude":"latitud",
-        "longitude": "longitud",
-        "temp" : "temperatura",
-        "hum" : "humedad",
-        "part": "nivel de partículas (ppm)",
-        "qual" : "¿como te sientes?",
+        "latitude":"Latitud",
+        "longitude": "Longitud",
+        "temp" : "Temperatura",
+        "hum" : "Humedad",
+        "part": "Hivel de partículas (ppm)",
+        "qual" : "¿Como te sientes?",
         "submit": "Enviar"
     }
 

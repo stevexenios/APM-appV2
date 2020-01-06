@@ -9,5 +9,4 @@ export interface Entry {
     temperature: string;
     humidity: string;
     particulate: string;
-    qualitative: string;
 }

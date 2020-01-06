@@ -1,3 +1,4 @@
+
 // This page holds both the home page display which holds the tabs for the page that when clicked swap between
 // pages.
 // The other important thing that is held in this is the import for the router which is what controls the
@@ -9,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 import { HomeRouter } from './home.router';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { HomeRouter } from './home.router';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomeRouter
+    HomeRouter,
+    TranslateModule.forChild()
   ],
   declarations: [HomePage]
 })

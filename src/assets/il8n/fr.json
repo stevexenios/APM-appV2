@@ -1,16 +1,26 @@
 {
+    "HOME" : {
+        "tab1" : "Accueil",
+        "tab2" : "Les Données"
+      },
     "DATA" : {
         "text" : "Changer de Langue",
-        "title" : "S'identifier",
-        "entry" : "ajouter une entrée"
+        "title" : "Les Données",
+        "entry" : "Ajouter une Entrée"
     },
 
     "MAP" : {
         "text" : "Changer de Langue",
-        "title" : "Carte de Pollution",
+        "title" : "Accueil",
         "display" : "Bienvenue sur le projet plus pour être ajouté à l'avenir.",
         "button1" : "Entrée Utilisateu",
-        "button2" : "RPi"
+        "button2" : "RPi",
+        "good" : "Qualité de l'air Actuelle: Bonne",
+        "mod" : "Qualité de l'air Actuelle: Modérée",
+        "ufsg" : "Qualité de l'air Actuelle: Insalubre pour des Groupes Spécifiques",
+        "unhealth" : "Qualité de l'air Actuelle: Insalubre",
+        "ver" : "Qualité de l'air Actuelle: Très Malsain",
+        "haz" : "Qualité de l'air Actuelle: Dangereux"
     },
 
     "RPI":{
@@ -30,12 +40,12 @@
         "title": "Entrée Utilisateur",
         "display": "Entrez votre position GPS, la température, l'humidité, le niveau de particules et comment vous vous sentez.",
         "button": "Retour au Tableau de Bord",
-        "latitude":"latitude",
-        "longitude": "longitude",
-        "temp" : "température",
-        "hum" : "humidité",
-        "part": "niveau de particules (ppm)",
-        "qual": "comment allez-vous?",
+        "latitude":"Latitude",
+        "longitude": "Longitude",
+        "temp" : "Température",
+        "hum" : "Humidité",
+        "part": "Niveau de particules (ppm)",
+        "qual": "Comment allez-vous?",
         "submit": "Soumettre"
     }
 

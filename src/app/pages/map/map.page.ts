@@ -22,6 +22,14 @@ export class MapPage implements OnInit {
   threshold: boolean;
   value: number;
 
+  goodBool = false;
+  modBool = false;
+  usfgBool = false;
+  unhealthBool = false;
+  verBool = false;
+  hazBool = false;
+
+
   constructor(public navCtrl: NavController, private translate: TranslateService,
               private popoverCtrl: PopoverController, private theme: ThemeService, private aqiServ: AqiService) {
   }
@@ -39,6 +47,7 @@ export class MapPage implements OnInit {
 
   ngOnInit() {
     this.aqi = this.aqiServ.getAQI();
+    this.setBool();
     this.threshold = this.aqi >= 101;
   }
 
@@ -46,6 +55,22 @@ export class MapPage implements OnInit {
   // when clicked on the display
   public gotoRPi() {
     this.navCtrl.navigateForward('/home/map/rpi');
+  }
+
+  setBool() {
+    if (this.aqi <= 50) {
+      this.goodBool = true;
+    } else if (this.aqi <= 100) {
+      this.modBool = true;
+    } else if (this.aqi <= 150) {
+      this.usfgBool = true;
+    } else if (this.aqi <= 200) {
+      this.unhealthBool = true;
+    } else if (this.aqi <= 300) {
+      this.verBool = true;
+    } else {
+      this.hazBool = true;
+    }
   }
 
   submit(form) {
