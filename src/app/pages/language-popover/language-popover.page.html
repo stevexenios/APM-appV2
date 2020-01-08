@@ -3,8 +3,8 @@ languages based on the currently selected language and will change the current l
 user selects -->
 
 <ion-list>
-  <ion-item button *ngFor="let lng of languages" (click)="select(lng.value)" detail="false">
-    <ion-label text-wrap>
+  <ion-item button *ngFor="let lng of languages" (click)="select(lng.value)" detail="false" color= "primary">
+    <ion-label text-wrap color="text">
       {{ lng.text }}
     </ion-label>
     <ion-icon slot="end" name="checkmark" *ngIf="lng.value == selected"></ion-icon>

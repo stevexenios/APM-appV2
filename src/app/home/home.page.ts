@@ -13,32 +13,38 @@ const themes = {
   good: {
     primary: '#00E400',
     light: '#53FF53',
-    dark: '#006F00'
+    dark: '#006F00',
+    text: '#000000'
   },
   moderate: {
     primary: '#FFFF00',
     light: '#FFFF7F',
-    dark: '#CFCF00'
+    dark: '#CFCF00',
+    text: '#000000'
   },
   ufsg: {
     primary: '#FF7E00',
     light: '#FF9730',
-    dark: '#C26000'
+    dark: '#C26000',
+    text: '#000000'
   },
   unhealthy: {
     primary: '#FF0000',
     light: '#FF3D3D',
-    dark: '#BD0000'
+    dark: '#BD0000',
+    text: '#FFFFFF'
   },
   veryUnhealthy: {
     primary: '#8C03AD',
     light: '#CD00FF',
-    dark: '#7D009C'
+    dark: '#7D009C',
+    text: '#FFFFFF'
   },
   hazardous: {
-    primary: '#800000 ',
+    primary: '#800000',
     light: '#780707',
-    dark: '#4f0000'
+    dark: '#4F0000',
+    text: '#FFFFFF'
   }
 
 };
@@ -85,7 +91,7 @@ export class HomePage implements OnInit {
   }
 
   setAQI() {
-    this.aqi  = 300;
+    this.aqi  = 301;
     // this.aqi = Math.floor(Math.random() * 500);
     this.aqiServ.setAQI(this.aqi);
   }

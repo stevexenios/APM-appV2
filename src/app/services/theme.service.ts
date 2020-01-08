@@ -19,7 +19,8 @@ function CSSTextGenerator(colors) {
   const {
     primary,
     dark,
-    light
+    light,
+    text
   } = colors;
 
   const shadeRatio = 0.1;
@@ -28,6 +29,7 @@ function CSSTextGenerator(colors) {
   return `
     --ion-color-base: ${light};
     --ion-color-contrast: ${dark};
+    --text-color: ${text};
 
     --ion-color-primary: ${primary};
     --ion-color-primary-rgb: 56,128,255;
@@ -35,7 +37,6 @@ function CSSTextGenerator(colors) {
     --ion-color-primary-contrast-rgb: 255,255,255;
     --ion-color-primary-shade:  ${Color(primary).darken(shadeRatio)};
 
-    // omitted other styles, see full source code
 `;
 }
 

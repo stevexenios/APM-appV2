@@ -3,6 +3,17 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --text-color: #222428;
+
+  /** text **/
+  --ion-color-text: #222428;
+  --ion-color-text-rgb: 34, 34, 34;
+  --ion-color-text-contrast: #ffffff;
+  --ion-color-text-contrast-rgb: 255, 255, 255;
+  --ion-color-text-shade: #1e2023;
+  --ion-color-text-tint: #383a3e;
+  
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -13,7 +24,7 @@
 
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
-  --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-rgb: 12,209,232;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #0bb8cc;
@@ -74,4 +85,26 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+}
+
+.ion-color-text {
+  --ion-color-base: var(--text-color);
+  --ion-color-base-rgb: var(--ion-color-text-rgb);
+  --ion-color-contrast: var(--ion-color-text-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-text-contrast-rgb);
+  --ion-color-shade: var(--ion-color-text-shade);
+  --ion-color-tint: var(--ion-color-text-tint);
+}
+
+h3{
+  color: var(--text-color);
+}
+
+ion-item{
+  color: var(--text-color);
+}
+
+ion-input{
+  color: var(--text-color);
 }

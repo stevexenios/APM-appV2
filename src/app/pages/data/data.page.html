@@ -24,7 +24,7 @@ to the page -->
     <ion-grid style = "margin-bottom: 25px;">
       <!-- Creates a list of data entries that when the server is up and running will be read in from there -->
         <ion-list>
-          <ion-item *ngFor= "let entry of (data | async)?.results" color = "primary"></ion-item> 
+          <ion-item *ngFor= "let entry of (data | async)?.results"></ion-item> 
         </ion-list>
       
         <!-- Creates an add entry button that sends the user to the page for data entry-->

@@ -25,25 +25,23 @@ to the page -->
  <!-- This will be updated as we make the page change color for the based on the air quality near where the 
 user is at -->
 <ion-content color="primary" padding>
-  <div *ngIf = 'goodBool'>{{'MAP.good' | translate}}</div>
-  <div *ngIf = 'modBool'>{{'MAP.mod' | translate}}</div>
-  <div *ngIf = 'usfgBool'>{{'MAP.ufsg' | translate}}</div>
-  <div *ngIf = 'unhealthBool'>{{'MAP.unhealth' | translate}}</div>
-  <div *ngIf = 'verBool'>{{'MAP.ver' | translate}}</div>
-  <div *ngIf = 'hazBool'>{{'MAP.haz' | translate}}s</div>
+  <div *ngIf = 'goodBool'><h3>{{'MAP.good' | translate}}</h3></div>
+  <div *ngIf = 'modBool'><h3>{{'MAP.mod' | translate}}</h3></div>
+  <div *ngIf = 'usfgBool'><h3>{{'MAP.ufsg' | translate}}</h3></div>
+  <div *ngIf = 'unhealthBool'><h3>{{'MAP.unhealth' | translate}}</h3></div>
+  <div *ngIf = 'verBool'><h3>{{'MAP.ver' | translate}}</h3></div>
+  <div *ngIf = 'hazBool'><h3>{{'MAP.haz' | translate}}</h3></div>
   <div *ngIf = 'threshold'>
     <form #form (ngSubmit)="submit(form)">
       <ion-grid>
         <ion-row color="primary" justify-content-center>
           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-            <div text-center>
-              <h3> {{'USERINPUT.qual' | translate}}<!-- To be added to the translation pages --></h3>
-            </div>
+            <div text-center><h3>{{'USERINPUT.qual' | translate}}<!-- To be added to the translation pages --></h3></div>
             <div padding>
               <!-- Each element is given a unique name and assigned a type that will be altered as we lock in what is
               needed for out putposes, and set as required before the user can submit the entry -->
-              <ion-item color= "primary">
-                <ion-input  name="Value" type = "number" min = '0' max = '10' placeholder = '5' ngModel required></ion-input>
+              <ion-item>
+                <ion-input name="Value" type = "number" min = '0' max = '10' placeholder = '5' ngModel required></ion-input>
               </ion-item>
             </div>
             <div padding>
