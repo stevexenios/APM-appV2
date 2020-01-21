@@ -1,10 +1,10 @@
 <!-- When the NgOnInit command is made to work again this will fill in with all of the options for the 
 languages based on the currently selected language and will change the current language based on what the 
 user selects -->
+
 <ion-list>
-  <ion-item> <ion-label text-wrap> test </ion-label> </ion-item>
-  <ion-item button *ngFor="let lng of languages" (click)="select(lng.value)" detail="false">
-    <ion-label text-wrap>
+  <ion-item button *ngFor="let lng of languages" (click)="select(lng.value)" detail="false" color= "primary">
+    <ion-label text-wrap color="text">
       {{ lng.text }}
     </ion-label>
     <ion-icon slot="end" name="checkmark" *ngIf="lng.value == selected"></ion-icon>

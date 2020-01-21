@@ -1,4 +1,8 @@
 {
+    "HOME" : {
+      "tab1" : "Home",
+      "tab2" : "Data"
+    },
     "DATA" : {
         "text" : "Change Language",
         "title" : "Data",
@@ -7,10 +11,17 @@
 
     "MAP" : {
         "text" : "Change Language",
-        "title" : "Pollution Map",
+        "title" : "Home",
         "display" : "Welcome to the project more to be added in the future.",
         "button1" : "User Input",
-        "button2" : "RPi"
+        "button2" : "RPi",
+        "good" : "Current Air Quality: Good",
+        "mod" : "Current Air Quality: Moderate",
+        "ufsg" : "Current Air Quality: Unhealthy for Specific Groups",
+        "unhealth" : "Current Air Quality: Unhealthy",
+        "ver" : "Current Air Quality: Very Unhealthy",
+        "haz" : "Current Air Quality: Hazardous"
+        
 
     },
 
@@ -31,12 +42,12 @@
         "title": "User Input",
         "display": "Enter your GPS location, the temperature, humidity, particulate level, and how you are feeling.",
         "button": "Return to Dashboard",
-        "latitude":"latitude",
-        "longitude": "longitude",
-        "temp" : "temperature",
-        "hum" : "humidity",
-        "part": "particulate level (ppm)",
-        "qual": "how are you feeling?",
+        "latitude":"Latitude",
+        "longitude": "Longitude",
+        "temp" : "Temperature",
+        "hum" : "Humidity",
+        "part": "Particulate level (ppm)",
+        "qual": "How are you feeling?",
         "submit": "Submit"
     }
 

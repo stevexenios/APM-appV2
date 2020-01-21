@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { LanguagePopoverPage } from './../../pages/language-popover/language-popover.page';
 import { TranslateService } from '@ngx-translate/core';
+import { ThemeService } from './../../services/theme.service';
 
 @Component({
   selector: 'app-rpi',
@@ -14,16 +15,17 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class RpiPage implements OnInit {
 
-  constructor( private translate: TranslateService, private popoverCtrl: PopoverController ) { }
+  constructor( private translate: TranslateService, private popoverCtrl: PopoverController, private theme: ThemeService ) { }
 
   // Once the fact that NgOnInit is not being called when the popover page is opened is fixed this creates
   // the dropdown list of languages for the user to choose from for translation
   async openLanguagePopover(ev) {
     const popover = await this.popoverCtrl.create({
       component: LanguagePopoverPage,
+      showBackdrop: true,
       event: ev
     });
-    await popover.present();
+    return await popover.present();
   }
 
   ngOnInit() {

@@ -1,3 +1,4 @@
+import { ThemeService } from './../../services/theme.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 // Imports needed for the server communication, these may be changed
 import { Observable } from 'rxjs';
 import { DataService } from './../../data/data.service';
+
 
 
 @Component({
@@ -26,16 +28,17 @@ export class DataPage implements OnInit {
   // Besides the navCtrl so that it can communicate between pages all of the imports that are added here are
   // private and all of them are needed for the services on the page
   constructor(public navCtrl: NavController, private translate: TranslateService, private popoverCtrl: PopoverController,
-              private http: HttpClient, private router: Router, private dataService: DataService) {}
+              private http: HttpClient, private router: Router, private dataService: DataService, private theme: ThemeService) {}
 
   // Once the fact that NgOnInit is not being called when the popover page is opened is fixed this creates
   // the dropdown list of languages for the user to choose from for translation
    async openLanguagePopover(ev) {
     const popover = await this.popoverCtrl.create({
       component: LanguagePopoverPage,
+      showBackdrop: true,
       event: ev
     });
-    popover.present();
+    return await popover.present();
   }
 
 

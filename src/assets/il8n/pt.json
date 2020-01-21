@@ -1,16 +1,26 @@
 {
+    "HOME" : {
+        "tab1" : "Casa",
+        "tab2" : "Dados"
+    },
     "DATA" : {
         "text" : "Mudar Idioma",
-        "title" : "Entrar",
-        "entry" : "adicionar entrada"
+        "title" : "Dados",
+        "entry" : "Adicionar Entrada"
     },
 
     "MAP" : {
         "text" : "Mudar Idioma",
-        "title" : "Mapa de Polição",
+        "title" : "Casa",
         "display" : "Bem-vindo ao projeto mais a ser adicionado no futuro.",
         "button1" : "Entrada do Usuário",
-        "button2" : "RPi"
+        "button2" : "RPi",
+        "good" : "Qualidade do ar Atual: Bom",
+        "mod" : "Qualidade do ar Atual: Moderada",
+        "ufsg" : "Qualidade do ar Atual: Insalubre para Grupos Específicos",
+        "unhealth" : "Qualidade do ar Atual: Insalubre",
+        "ver" : "Qualidade do ar Atual: Muito Insalubre",
+        "haz" : "Qualidade do ar Atual: Perigosa"
 
     },
 
@@ -31,12 +41,12 @@
         "title": "Entrada do Usuário",
         "display": "Insira informações para nova conta",
         "button": "Regressar ao Dashboard",
-        "latitude":"latitude",
-        "longitude": "longitude",
-        "temp" : "temperatura",
-        "hum" : "umidade",
-        "part": "nível de partículas (ppm)",
-        "qual": "como você está se sentindo?",
+        "latitude":"Latitude",
+        "longitude": "Longitude",
+        "temp" : "Temperatura",
+        "hum" : "Umidade",
+        "part": "Nível de partículas (ppm)",
+        "qual": "Como você está se sentindo?",
         "submit": "Enviar"
     }
 }

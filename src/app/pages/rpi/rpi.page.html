@@ -12,7 +12,7 @@ to the page -->
     </ion-buttons>
 
     <!-- Creates the title of the page and places it in the header bar of the page -->
-    <ion-title>{{ 'RPI.title' | translate}}<!-- Sets the text to be piped 
+    <ion-title>{{ 'RPI.display' | translate}}<!-- Sets the text to be piped 
       in from the language pages --> </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -21,33 +21,15 @@ to the page -->
 <!-- Creates a form that holds the information that will eventually be read in from the cloud server -->
 <ion-content  color="primary">
     <ion-grid>
-      <ion-row color="primary" justify-content-center>
+      <ion-row justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div text-center>
-            <h3>{{ 'RPI.display' | translate}}<!-- Sets the text to be piped in from the language pages --></h3>
-          </div>
           <!-- Each entry is set so that it can't be altered by the user as it is being read from the server-->
           <div padding>
-            <ion-item>
-              <ion-input  name="latitude" type="text" placeholder="37&deg;44&#39;46.1&#34; N" readonly= "true" 
-              ngModel></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input  name="longitude" type="text" placeholder="25&deg;40&#39;0.8&#34; W" readonly= "true"
-               ngModel></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="temperature" type="text" placeholder="17.8&deg;C" readonly= "true" 
-              ngModel></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="humidity" type="text" placeholder="75&#37;" readonly= "true"
-               ngModel></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="particulate level (ppm)" type="text" placeholder="2700" readonly= "true" 
-              ngModel></ion-input>
-            </ion-item>
+            <ion-item><h3>{{ 'USERINPUT.latitude' | translate}}: 37&deg;44&#39;46.1&#34; N</h3></ion-item>
+            <ion-item><h3>{{ 'USERINPUT.longitude' | translate}}: 25&deg;40&#39;0.8&#34; W</h3></ion-item>
+            <ion-item><h3>{{ 'USERINPUT.temp' | translate}}: 17.8&deg;C</h3></ion-item>
+            <ion-item><h3>{{ 'USERINPUT.hum' | translate}}: 75&#37;</h3></ion-item>
+            <ion-item><h3>{{ 'USERINPUT.part' | translate}}: 2700</h3></ion-item>
           </div>
         </ion-col>
       </ion-row>

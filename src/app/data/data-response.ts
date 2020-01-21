@@ -10,7 +10,6 @@ export interface DataResponse {
         temperature: string,
         humidity: string,
         particulate: string,
-        qualitative: string,
         access_token: string,
         expires_in: number
     };

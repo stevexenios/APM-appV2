@@ -3,7 +3,7 @@
 // This imports the data handling service for the server, as such this may be replaced
 import { DataModule } from './data/data.module';
 
-// Default imports needed for teh app
+// Default imports needed for the app
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -22,6 +22,8 @@ import { LanguagePopoverPageModule } from './pages/language-popover/language-pop
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 
+import { QualitativeQuestionComponent } from './components/qualitative-question/qualitative-question.component';
+
 // Creates the function that allows every page in the app to have access to the translation pages and thus change
 // languages
 export function createTranslateLoader(http: HttpClient) {
@@ -29,8 +31,8 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, QualitativeQuestionComponent],
+  entryComponents: [QualitativeQuestionComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     // Everything below this point was added to the NgModule for the app to function
     IonicStorageModule.forRoot(),
